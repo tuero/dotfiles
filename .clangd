@@ -1,0 +1,28 @@
+CompileFlags:
+  Add: [
+    -std=c++26,
+    -Wall,
+    -Wextra,
+    -Wconversion,
+    -Wsign-conversion,
+    -Wunused,
+    -Wshadow
+  ]
+
+Diagnostics:
+  # Enable and configure Clang-Tidy integration
+  ClangTidy:
+    Add: [
+      abseil-*,
+      performance*, 
+      modernize*, 
+      bugprone*
+      clang-analyzer-*,
+      cppcoreguidelines-*,
+      misc-*,
+      bugprone-use-after-move
+    ]
+
+Index:
+  Background: Build
+
