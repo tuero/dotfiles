@@ -10,19 +10,27 @@ CompileFlags:
   ]
 
 Diagnostics:
-  # Enable and configure Clang-Tidy integration
   ClangTidy:
     Add: [
       abseil-*,
-      performance*, 
-      modernize*, 
-      bugprone*
       clang-analyzer-*,
       cppcoreguidelines-*,
       misc-*,
+      modernize-*,
+      performance-*,
       bugprone-use-after-move
     ]
+    Remove: [
+      modernize-use-trailing-return-type,
+      cppcoreguidelines-non-private-member-variables-in-classes,
+      misc-non-private-member-variables-in-classes,
+      misc-include-cleaner,
+      performance-enum-size
+    ]
+    CheckOptions:
+      modernize-use-nullptr.NullMacros: "NULL"
+      cppcoreguidelines-rvalue-reference-param-not-moved.AllowPartialMove: true
+      misc-include-cleaner.MissingIncludes: false
 
 Index:
   Background: Build
-
