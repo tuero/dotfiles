@@ -22,7 +22,7 @@ AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: false
 BinPackParameters: false
-BracedInitializerIndentWidth: 0
+BracedInitializerIndentWidth: 4
 BraceWrapping: # Requires BreakBeforeBraces: Custom
   AfterCaseLabel: false
   AfterClass: false
