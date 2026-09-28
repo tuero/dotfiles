@@ -46,6 +46,11 @@ BreakAfterAttributes: Never # clang-format 16
 BreakAfterJavaFieldAnnotations: true
 BreakAfterReturnType: ExceptShortType
 BreakBeforeBinaryOperators: NonAssignment
+BreakBinaryOperations: # clang-format 23
+  Default: Never
+  PerOperator:
+    - Operators: ['|']
+      Style: OnePerLine
 BreakBeforeBraces: Custom
 BreakBeforeConceptDeclarations: Always
 BreakBeforeTernaryOperators: true
